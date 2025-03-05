@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>sign-up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">sign-up</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="signUpForm">
+    <input type="text" formControlName="firstName" placeholder="First name" />
+    <input type="text" formControlName="lastName" placeholder="Last name" />
+    <input type="text" formControlName="email" placeholder="Email" />
+    <input type="text" formControlName="password" placeholder="Password" />
+    <input
+      type="text"
+      formControlName="confirmPassword"
+      placeholder="Confirm Password"
+    />
+    <ion-button (click)="onSubmit()">Sign up</ion-button>
+  </form>
+</ion-content>
